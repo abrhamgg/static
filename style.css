@@ -1,0 +1,36 @@
+.note-box {
+    position: absolute;
+    top: -200px; /* Adjust the value based on your design */
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px;
+    font-size: 11px; /* Increased font size by 10% */
+}
+
+.button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 8.64px 17.28px; /* Increased padding by 20% more */
+    border-radius: 3px; 
+    margin-top: 5px; 
+    font-size: 11.088px; /* Increased font size by 20% more */
+}
+@media (max-width: 768px) {
+    .note-box {
+        top: -100px; /* Adjust top position for mobile devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .sm\:mr-12,
+    .lg\:pr-12 {
+        margin-top: 100px;
+    }
+}
