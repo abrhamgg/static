@@ -45,18 +45,25 @@
                 <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image:url(&quot;img/hero-index-page.resized.min.jpeg&quot;)"><span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span></div>
                 <div class="container relative mx-auto">
                     <div class="items-center flex flex-wrap">
-                        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                            <div class="note-box p-4 md:p-8">
-                                <p><strong>Important:</strong> We have been acquired! Futuristicon and its solutions are now part of TheYTLab's family, and we believe this decision will further improve our services and customer satisfaction, while providing TheYTLab with new solutions. Old customers may access their account information at TheYTLab's website. Thank you!</p>
-                                <a href="https://theytlab.com/" class="button py-2 px-4 md:py-3 md:px-6">Go to TheYTLab</a>
-                            </div>
-                            <div class="sm:mr-12 lg:pr-12">
-                                <h1 class="text-white font-semibold text-5xl">
-                                    What We Do and Why We Do It<!-- --> 
-                                </h1>
-                                <p class="mt-4 text-lg text-gray-300">
-                                <div class="italic">Learn about what we can do for you and what is our motive behind behind giving back a large chunk of our profit to life-extension advocators.</div>
-                                </p>
+                        <div class="container relative mx-auto">
+                        
+                            <div class="items-center flex flex-wrap">
+                                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                  <div id="noteBox" class="note-box p-4 md:p-8">
+                                      <p><strong>Important:</strong> We have been acquired! Futuristicon and its solutions are now part of TheYTLab's family, and we believe this decision will further improve our services and customer satisfaction, while providing TheYTLab with new solutions. Old customers may access their account information at TheYTLab's website. Thank you!</p>
+                                      <a href="https://theytlab.com/" class="button py-2 px-4 md:py-3 md:px-6">Go to TheYTLab</a>
+                                      
+                                      <a class="read-less" id="readLess">Read Less</a>
+                                  </div>
+                                 
+                                    <div class="sm:mr-12 lg:pr-12">
+                                      <div id = "readMore" class="read-more">Read More</div>
+                                        <h1 class="text-white font-semibold text-5xl">
+                                            We develop for companies working on rejuvenation<!-- --> 
+                                        </h1>
+                                        <p class="mt-4 text-lg text-gray-300">And we give 40% of our profit to anti-aging advocacy foundations. </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -243,5 +250,22 @@
 </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/about-us/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["polyfill-e31b97aae08c3e49ef93.js"],"app":["app-f728d1b440367e6c584d.js"],"gatsby-plugin-image":["/gatsby-plugin-image-bee47b25145b079fb122.js"],"component---src-pages-404-js":["component---src-pages-404-js-389bd6bb05481ecee675.js"],"component---src-pages-about-us-tsx":["/component---src-pages-about-us-tsx-696d968e141195dacfd4.js"],"component---src-pages-index-tsx":["component---src-pages-index-tsx-cb4f8e3245f4a5df0142.js"],"component---src-pages-privacy-policy-js":["/component---src-pages-privacy-policy-js-d155b4a200a5e285e396.js"],"component---src-pages-thanks-for-contacting-us-tsx":["/component---src-pages-thanks-for-contacting-us-tsx-72d63f540debd12bc1ee.js"],"component---src-templates-blog-post-archive-js":["/component---src-templates-blog-post-archive-js-12952c1591b406d81daa.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-ac1bd875d9c4b3f6bce2.js"]};/*]]>*/</script><script src="polyfill-e31b97aae08c3e49ef93.js" nomodule=""></script><script src="https://futuristicon.com/component---src-pages-about-us-tsx-696d968e141195dacfd4.js" async=""></script><script src="commons-8dbfece32dfcb539d937.js" async=""></script><script src="app-f728d1b440367e6c584d.js" async=""></script><script src="framework-e043f7032a5540820000.js" async=""></script><script src="webpack-runtime-a0fc071ac03c7218fe10.js" async=""></script> -->
 
 </body>
-      
+<script>
+    const noteBox = document.getElementById('noteBox');
+const readMoreBtn = document.getElementById('readMore');
+const readLessBtn = document.getElementById('readLess');
+
+readMoreBtn.addEventListener('click', function() {
+if (readMoreBtn.textContent === 'Read More') {
+noteBox.style.maxHeight = 'none'; // Expand note box
+readLessBtn.style.display = 'block'; // Show Read Less button
+} 
+readLessBtn.addEventListener('click', function() {
+noteBox.style.maxHeight = '30%'; // Collapse note box
+readMoreBtn.style.display = 'block'; // Show Read More button
+readLessBtn.style.display = 'none'; // Hide Read Less button
+
+});
+});
+  </script>
       </html>

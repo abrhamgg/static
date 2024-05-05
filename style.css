@@ -9,6 +9,8 @@
     padding: 10px;
     max-width: 300px;
     font-size: 11px; /* Increased font size by 10% */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.3s ease; /* Add transition for smooth animation */
 }
 
 .button {
@@ -22,15 +24,30 @@
     margin-top: 5px; 
     font-size: 11.088px; /* Increased font size by 20% more */
 }
-@media (max-width: 768px) {
-    .note-box {
-        top: -100px; /* Adjust top position for mobile devices */
-    }
+.read-more {
+    display: none; /* Hide by default */
+}
+.read-less {
+    display: none; /* Hide by default */
+
 }
 
-@media (max-width: 768px) {
-    .sm\:mr-12,
-    .lg\:pr-12 {
-        margin-top: 100px;
+.read-more {
+    cursor: pointer;
+    color: #007bff;
+    text-align: center;
+    margin-top: 5px;
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 767px) {
+    .read-more {
+        display: block; /* Show on mobile devices */
+    }
+    .note-box {
+        max-height: 30%; /* Collapse by 50% */
+    }
+    .note-box {
+        top: -30%; /* Adjust top position for better visibility */
     }
 }
